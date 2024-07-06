@@ -1,0 +1,40 @@
+/* Exemplo de estilos básicos */
+.youtube-videos {
+    padding: 20px;
+  }
+  
+  .video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .video-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .video-item a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .video-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .video-info {
+    padding: 10px 0;
+  }
+  
+  .video-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .video-description {
+    color: #666;
+    font-size: 14px;
+  }
+  
