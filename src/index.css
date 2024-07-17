@@ -1,4 +1,7 @@
-:root {
+body{
+  background: rgb(181,4,26);
+  background: linear-gradient(0deg, rgba(181,4,26,1) 0%, rgba(44,1,18,1) 80%, rgba(13,0,0,1) 100%);
+  padding: 0px 20px 0px 20px;
   font-family: "Kantumruy Pro", sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -8,14 +11,6 @@
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body{
-  background: rgb(181,4,26);
-  background: linear-gradient(0deg, rgba(181,4,26,1) 0%, rgba(44,1,18,1) 80%, rgba(13,0,0,1) 100%);
-  padding: 0px 20px 0px 20px;
 }
 
 *{

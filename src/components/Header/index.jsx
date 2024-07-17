@@ -1,19 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Header.module.css'
+import styleHeader from './Header.module.css'
 
 function Header() {
   return (
     <>
-      <header className='container'>
-        <span > 
-          <Link to="/">MISTERY</Link>
+      <header className={styleHeader.container}>
+        <span className={styleHeader.svgRose}> 
+          <Link to="/" className={styleHeader.misteryTittle}>MISTERY</Link>
         </span>
         
-        <ul>
-          <li><Link to="/songs">PARTICIPAÇÕES</Link></li>
-          <li><Link to="/songs">MÚSICAS</Link></li>
-          <li><Link to="/about">SOBRE</Link></li>
+        <ul className={styleHeader.ulHeader}>
+          <li className={styleHeader.svgRoseFallen}><Link to="" className={styleHeader.linkHeader}>PARTICIPAÇÕES</Link></li>
+          <li className={styleHeader.svgRoseFallen}><Link to="/songs" className={styleHeader.linkHeader}>MÚSICAS</Link></li>
+          <li className={styleHeader.svgRoseFallen}><Link to="/about" className={styleHeader.linkHeader}>SOBRE</Link></li>
         </ul>
       </header>
     </>

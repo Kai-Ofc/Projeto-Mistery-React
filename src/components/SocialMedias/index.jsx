@@ -1,10 +1,12 @@
 import React from 'react';
+import styleSocialMedia from './SocialMedias.module.css'
+import FlowerHeader from '../Elements/flowerHeader/index';
 
 const ChannelSocialMedias = () => {
     
     return (
-      <div>
-        <h2>Redes Sociais e Links do Canal</h2>
+      <div className={styleSocialMedia.socialDiv}>
+        <FlowerHeader titulo="SOBRE"/>
         <ul>
           <li><a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/artist/5tXGJbbT8kC46qteRRIwGx">Spotify</a></li>
           <li><a target="_blank" rel="noopener noreferrer" href="https://music.youtube.com/channel/UCzvYWzqkojYsbzvPizXoskg">Youtube Music</a></li>
