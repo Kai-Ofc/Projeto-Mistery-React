@@ -2,3 +2,38 @@
     margin-top: 5vh;
     padding: 0px 30px 0px 30px;
 }
+
+.imgContainer{
+    display: flex;
+    width: 100%;
+    margin-bottom: 3vh;
+    justify-content: flex-start;
+}
+
+.misteryImg{
+    width: 20%;
+    height: 30vh;
+    border-radius: 20px;
+    margin-right: 5%;
+    background-image: url(/src/assets/misteryImage.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.imgContainer p{
+    line-height: 1.7em;
+    font-size: 27px;
+    width: 70%;
+    text-align: justify;
+}
+
+.redeContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.redeSocial{
+    list-style: none;
+    margin-right: 2%;
+}

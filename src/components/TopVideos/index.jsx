@@ -116,3 +116,21 @@ return (
 }
 
 export default TopVideos
+
+/* 
+import React from 'react';
+import Carousel from './Carousel';
+
+const apiUrl = 'http://sua-api.com/images'; // Substitua pela URL da sua API que retorna as imagens
+
+const App = () => {
+  return (
+    <div className="App">
+      <h1>Meu Carrossel de Imagens</h1>
+      <Carousel apiUrl={apiUrl} />
+    </div>
+  );
+};
+
+export default App;
+*/
