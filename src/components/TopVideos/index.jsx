@@ -5,8 +5,12 @@ import apiKey from '../../services/apiKey';
 import channelId from '../../services/channelId';
 import Music from '../../pages/Music';
 import { Link } from 'react-router-dom'
+import FlowerHeader from '../Elements/FlowerHeader/index';
+import styleTopVideos from './TopVideos.module.css'
+import Carrosel from './../Elements/Carrossel/indexCarrossel'
 
 function TopVideos() {
+
   
 const [videos, setVideos] = useState([]);
 
@@ -72,8 +76,8 @@ let teste = {
 }
 
 return (
-  <div>
-    <h2>Top 3 vídeos mais vistos</h2>
+  <div className={styleTopVideos.container}>
+    <FlowerHeader titulo="PRINCIPAIS MÚSICAS"/>
     <ul>
 
 
@@ -111,26 +115,9 @@ return (
         /*<SongCard video={video} />*/
       ))}
     </ul>
+    <Carrosel/>
   </div>
 );
 }
 
 export default TopVideos
-
-/* 
-import React from 'react';
-import Carousel from './Carousel';
-
-const apiUrl = 'http://sua-api.com/images'; // Substitua pela URL da sua API que retorna as imagens
-
-const App = () => {
-  return (
-    <div className="App">
-      <h1>Meu Carrossel de Imagens</h1>
-      <Carousel apiUrl={apiUrl} />
-    </div>
-  );
-};
-
-export default App;
-*/

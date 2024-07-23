@@ -1,12 +1,14 @@
 .socialDiv{
     margin-top: 5vh;
     padding: 0px 30px 0px 30px;
+    margin-bottom: 8vh;
 }
 
 .imgContainer{
     display: flex;
     width: 100%;
-    margin-bottom: 3vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
     justify-content: flex-start;
 }
 
