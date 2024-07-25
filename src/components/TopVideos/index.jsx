@@ -78,9 +78,7 @@ let teste = {
 return (
   <div className={styleTopVideos.container}>
     <FlowerHeader titulo="PRINCIPAIS MÚSICAS"/>
-    <ul>
-
-
+    {/* <ul>
       {videos.map((video) => (
         <li key={video.id}>
         <Link to={{
@@ -98,7 +96,7 @@ return (
               src={video.thumbnail}
               alt={video.title}
             />
-            {/*<iframe
+            <iframe
                 width="560"
                 height="315"
                 src={`https://www.youtube.com/embed/${video.id}`}
@@ -108,13 +106,13 @@ return (
                 allowFullScreen
             ></iframe>*/}
             {/*<div>{video.title}</div>
-            <div>Visualizações: {video.views}</div>*/}
+            <div>Visualizações: {video.views}</div>
 
             
         </li>
-        /*<SongCard video={video} />*/
+        <SongCard video={video} />
       ))}
-    </ul>
+    </ul> */}
     <Carrosel/>
   </div>
 );

@@ -6,7 +6,7 @@
   .slider {
     
     margin: 0 auto;
-  }
+  } 
   
   .slideItem {
     padding: 0 10px; /* Espaçamento entre os slides */
@@ -17,6 +17,10 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .slideInner a{
+    text-decoration: none;
   }
   
   .thumbnail {
@@ -30,6 +34,12 @@
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    text-align: center;
+    text-align: left;
+  }
+
+  .description p{
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: space-between;
   }
   
