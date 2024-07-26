@@ -50,7 +50,7 @@ function TopVideos() {
           const video = {
             id: item.id.videoId,
             title: item.snippet.title,
-            thumbnail: item.snippet.thumbnails.high.url, // Escolhendo o tamanho 'high' para melhor qualidade
+            thumbnail: item.snippet.thumbnails.high.url,
             views: videosDetailsResponse.data.items[index].statistics.viewCount,
             releaseDate: new Date(item.snippet.publishedAt).toLocaleDateString('pt-BR', {
               year: 'numeric',
@@ -117,10 +117,10 @@ function TopVideos() {
                   className={styleCarrossel.thumbnail}
                 />
                 <div className={styleCarrossel.description}>
-                  <p>{video.title.toUpperCase()} <span>{video.releaseDate}</span></p>
+                  <p>{video.title.toUpperCase()} <span>{video.releaseDate.toUpperCase()}</span></p>
                   <p>
                     {new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(video.views)} DE VISUALIZAÇÕES{' '}
-                    <Link to="/songs">SAIBA MAIS</Link>
+                    <Link to="/songs" className={styleCarrossel.saibaMais}>SAIBA MAIS</Link>
                   </p>
                 </div>
               </Link>

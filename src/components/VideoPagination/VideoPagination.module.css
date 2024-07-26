@@ -1,0 +1,53 @@
+/* Container principal */
+.container {
+    text-align: center;
+    padding: 0px 30px 0px 30px;
+  }
+  
+  /* Grid de miniaturas */
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo das imagens */
+  .thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Imagem dentro do thumbnail */
+  .thumbnail img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Botões de paginação */
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  /* Botão de paginação */
+  .pageButton {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  /* Botão ativo */
+  .pageButtonActive {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
