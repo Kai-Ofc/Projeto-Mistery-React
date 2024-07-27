@@ -77,7 +77,6 @@ let teste = {
 
 return (
   <div className={styleTopVideos.container}>
-    <FlowerHeader titulo="PRINCIPAIS MÚSICAS"/>
     {/* <ul>
       {videos.map((video) => (
         <li key={video.id}>

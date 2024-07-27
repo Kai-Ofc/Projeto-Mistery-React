@@ -106,7 +106,6 @@ function Songs() {
 
   return (
     <div className={styles.container}>
-      <FlowerHeader titulo="TODAS AS MÚSICAS"/>
       <div className={styles.gridContainer}>
         {currentVideos.map((video) => (
           <div key={video.id.videoId} className={styles.thumbnail}>

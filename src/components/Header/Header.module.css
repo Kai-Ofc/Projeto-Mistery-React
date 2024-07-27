@@ -19,7 +19,7 @@
 }
 
 .svgRose ::before{
-    content: url(/src/assets/rose.svg);
+    content: url(/src/assets/Svgs/rose.svg);
     position: absolute;
     left: 0px;
     top: 0px;
@@ -59,7 +59,7 @@
 
 .svgRoseFallen:hover ::before{
     position: absolute;
-    content: url(/src/assets/hoverRose.svg);
+    content: url(/src/assets/Svgs/hoverRose.svg);
     left: -25px;
     border-bottom: transparent;
     transition: .5s;
