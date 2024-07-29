@@ -17,7 +17,7 @@
   height: 30%; /* Altura do slide ajustada */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .slideInner a{
@@ -33,7 +33,7 @@
 
 .description {
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: none;
   color: white;
   text-align: left;
 }

@@ -38,16 +38,19 @@
   .pageButton {
     margin: 0 5px;
     padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
+    border: 1px solid #8C034E;
+    border-radius: 50px;
+    background-color: #8C034E;
+    opacity: .5;
+    color: #fff;
     cursor: pointer;
   }
   
   /* Botão ativo */
   .pageButtonActive {
-    background-color: #007bff;
+    background-color: #F2295F;
+    border: 1px solid #F2295F;
+    opacity: 1;
     color: #fff;
   }
   

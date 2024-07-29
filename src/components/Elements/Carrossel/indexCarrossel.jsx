@@ -17,7 +17,7 @@ function TopVideos() {
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
           params: {
             key: apiKey,
-            channelId: channelId, // Coloque seu ID de canal aqui
+            channelId: channelId,
             part: 'snippet',
             order: 'viewCount',
             maxResults: 3,
@@ -120,7 +120,14 @@ function TopVideos() {
                   <p>{video.title.toUpperCase()} <span>{video.releaseDate.toUpperCase()}</span></p>
                   <p>
                     {new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(video.views)} DE VISUALIZAÇÕES{' '}
-                    <Link to="/songs" className={styleCarrossel.saibaMais}>SAIBA MAIS</Link>
+                    <Link 
+                      to={{
+                        pathname: '/music',
+                        search: `?musica=${encodeURIComponent(JSON.stringify(video))}`
+                      }} 
+                      className={styleCarrossel.saibaMais}>
+                        SAIBA MAIS
+                    </Link>
                   </p>
                 </div>
               </Link>
