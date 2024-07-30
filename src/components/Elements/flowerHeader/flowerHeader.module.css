@@ -22,3 +22,16 @@
   margin-left: .6%;
   border-radius: 30px;
 }
+
+
+/* Telas Pequenas */
+@media(max-width: 480px) {
+  .tittle svg{
+    display: none;
+  }
+
+  .tittle span{
+    margin-left: 0%;
+    font-size: 18px;
+  }
+}

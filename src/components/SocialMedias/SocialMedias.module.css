@@ -38,3 +38,45 @@
     list-style: none;
     margin-right: 2%;
 }
+
+
+/* Telas Médias */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .misteryImg{
+        width: 40%;
+    }
+}
+
+/* Telas Pequenas */
+@media(max-width: 480px) {
+    .imgContainer{
+        display: block;
+        width: 100%;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+
+    .imgContainer p{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .misteryImg{
+        width: 100%;
+        margin-right: 0%;
+        margin-bottom: 3vh;
+    }
+
+    .responsiveText{
+        display: none;
+    }
+
+    .redeContainer{
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}

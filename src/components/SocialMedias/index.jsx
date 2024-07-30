@@ -10,7 +10,9 @@ const ChannelSocialMedias = () => {
         <FlowerHeader titulo="SOBRE"/>
         <div className={styleSocialMedia.imgContainer}>
           <div className={styleSocialMedia.misteryImg}></div>
-          <p>Mistery é uma artista independente que trabalha com músicas da temática e do cenário “Geek”. Além disso, ela também trabalha com composição, produção e direção musical de todos os seus projetos, trazendo estilos diferenciados e únicos para suas músicas.</p>
+          <p>
+            Mistery é uma artista independente que trabalha com músicas da temática e do cenário “Geek”. <span className={styleSocialMedia.responsiveText}> Além disso, ela também trabalha com composição, produção e direção musical de todos os seus projetos, trazendo estilos diferenciados e únicos para suas músicas.</span>
+          </p>
         </div>
         <FlowerHeader titulo="REDES SOCIAIS:"/>
         <ul className={styleSocialMedia.redeContainer}>
