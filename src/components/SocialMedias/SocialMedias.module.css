@@ -16,7 +16,7 @@
     height: 30vh;
     border-radius: 20px;
     margin-right: 5%;
-    background-image: url(/src/assets/misteryImage.jpg);
+    background-image: url(/src/assets/Images/misteryImage.jpg);
     background-size: cover;
     background-position: center;
 }

@@ -11,7 +11,7 @@ function Header() {
         </span>
         
         <ul className={styleHeader.ulHeader}>
-          <li className={styleHeader.svgRoseFallen}><Link to="" className={styleHeader.linkHeader}>PARTICIPAÇÕES</Link></li>
+          <li className={styleHeader.svgRoseFallen}><Link to="/songs" className={styleHeader.linkHeader}>PARTICIPAÇÕES</Link></li>
           <li className={styleHeader.svgRoseFallen}><Link to="/songs" className={styleHeader.linkHeader}>MÚSICAS</Link></li>
           <li className={styleHeader.svgRoseFallen}><Link to="/about" className={styleHeader.linkHeader}>SOBRE</Link></li>
         </ul>

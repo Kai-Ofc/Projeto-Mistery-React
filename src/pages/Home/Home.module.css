@@ -1,3 +1,34 @@
 .container{
-    padding: 0px 30px 0px 30px;
-  }
+  padding: 0px 30px 0px 30px;
+}
+
+.tContainer{
+  margin-top: 6vh;
+}
+
+.teamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.teamContainer a {
+  position: relative; 
+  display: block; 
+  width: 14%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  transition: .5s;
+}
+
+.teamContainer a img {
+  border-radius: 30px;
+  width: 100%; 
+  display: block;
+  transition: 0.5s ; 
+}
+.teamContainer a:hover img {
+  transform: scale(1.1); 
+  filter: grayscale(100%); 
+}

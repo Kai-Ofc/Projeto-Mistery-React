@@ -12,68 +12,68 @@ import Carrosel from './../Elements/Carrossel/indexCarrossel'
 function TopVideos() {
 
   
-const [videos, setVideos] = useState([]);
+// const [videos, setVideos] = useState([]);
 
-useEffect(() => {
-  const fetchTopVideos = async () => {
-    try {
-      const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-        params: {
-          key: apiKey,
-          channelId: channelId,
-          part: 'snippet',
-          order: 'viewCount',
-          maxResults: 3,
-          type: 'video'
-        }
-      });
+// useEffect(() => {
+//   const fetchTopVideos = async () => {
+//     try {
+//       const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
+//         params: {
+//           key: apiKey,
+//           channelId: channelId,
+//           part: 'snippet',
+//           order: 'viewCount',
+//           maxResults: 3,
+//           type: 'video'
+//         }
+//       });
 
-      if (response.status !== 200) {
-        throw new Error('Falha ao carregar os vídeos');
-      }
+//       if (response.status !== 200) {
+//         throw new Error('Falha ao carregar os vídeos');
+//       }
 
-      // Obtemos os IDs dos vídeos para buscar as estatísticas
-      const videoIds = response.data.items.map(item => item.id.videoId).join(',');
-      console.log('videoIds',videoIds)
+//       // Obtemos os IDs dos vídeos para buscar as estatísticas
+//       const videoIds = response.data.items.map(item => item.id.videoId).join(',');
+//       console.log('videoIds',videoIds)
 
-      // Fazemos outra requisição para buscar as estatísticas
-      const statsResponse = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
-        params: {
-          key: apiKey,
-          id: videoIds,
-          part: 'statistics'
-        }
-      });
-      console.log('statsResponse',statsResponse)
+//       // Fazemos outra requisição para buscar as estatísticas
+//       const statsResponse = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
+//         params: {
+//           key: apiKey,
+//           id: videoIds,
+//           part: 'statistics'
+//         }
+//       });
+//       console.log('statsResponse',statsResponse)
 
-      if (statsResponse.status !== 200) {
-        throw new Error('Falha ao carregar as estatísticas dos vídeos');
-      }
+//       if (statsResponse.status !== 200) {
+//         throw new Error('Falha ao carregar as estatísticas dos vídeos');
+//       }
 
-      // Combinamos os dados dos vídeos com as estatísticas
-      const videosWithStats = response.data.items.map(item => {
-        const video = {
-          id: item.id.videoId,
-          title: item.snippet.title,
-          thumbnail: item.snippet.thumbnails.default.url,
-          views: statsResponse.data.items.find(stats => stats.id === item.id.videoId).statistics.viewCount
-        };
-        return video;
-      });
+//       // Combinamos os dados dos vídeos com as estatísticas
+//       const videosWithStats = response.data.items.map(item => {
+//         const video = {
+//           id: item.id.videoId,
+//           title: item.snippet.title,
+//           thumbnail: item.snippet.thumbnails.default.url,
+//           views: statsResponse.data.items.find(stats => stats.id === item.id.videoId).statistics.viewCount
+//         };
+//         return video;
+//       });
 
-      setVideos(videosWithStats);
-    } catch (error) {
-      console.error('Erro ao buscar vídeos:', error);
-    }
-  };
+//       setVideos(videosWithStats);
+//     } catch (error) {
+//       console.error('Erro ao buscar vídeos:', error);
+//     }
+//   };
 
-  fetchTopVideos();
-}, [channelId, apiKey]);
+//   fetchTopVideos();
+// }, [channelId, apiKey]);
 
-let teste = {
-  id: '1',
-  tittle: "titulo"
-}
+// let teste = {
+//   id: '1',
+//   tittle: "titulo"
+// }
 
 return (
   <div className={styleTopVideos.container}>
