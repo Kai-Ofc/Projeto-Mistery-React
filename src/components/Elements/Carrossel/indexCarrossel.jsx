@@ -105,11 +105,7 @@ function TopVideos() {
         {videos.map((video) => (
           <div key={video.id} className={styleCarrossel.slideItem}>
             <div className={styleCarrossel.slideInner}>
-              <Link
-                to={{
-                  pathname: '/music',
-                  search: `?musica=${encodeURIComponent(JSON.stringify(video))}`
-                }}
+              <a
               >
                 <img
                   src={video.thumbnail}
@@ -120,17 +116,13 @@ function TopVideos() {
                   <p>{video.title.toUpperCase()} <span>{video.releaseDate.toUpperCase()}</span></p>
                   <p>
                     {new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(video.views)} DE VISUALIZAÇÕES{' '}
-                    <Link 
-                      to={{
-                        pathname: '/music',
-                        search: `?musica=${encodeURIComponent(JSON.stringify(video))}`
-                      }} 
+                    <a 
                       className={styleCarrossel.saibaMais}>
                         SAIBA MAIS
-                    </Link>
+                    </a>
                   </p>
                 </div>
-              </Link>
+              </a>
             </div>
           </div>
         ))}
