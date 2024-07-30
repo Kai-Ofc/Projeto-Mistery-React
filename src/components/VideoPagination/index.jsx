@@ -3,7 +3,7 @@ import axios from 'axios';
 import apiKey from '../../services/apiKey';
 import channelId from '../../services/channelId';
 import styles from './VideoPagination.module.css'; // Importando o módulo CSS
-import FlowerHeader from '../Elements/FlowerHeader/index';
+import FlowerHeader from '../Elements/flowerHeader/index';
 
 function Songs() {
   const [videos, setVideos] = useState([]);

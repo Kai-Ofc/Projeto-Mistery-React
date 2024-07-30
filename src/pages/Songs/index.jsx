@@ -5,7 +5,7 @@ import apiKey from '../../services/apiKey';
 import channelId from '../../services/channelId';
 import VideoPagination from '../../components/VideoPagination'
 import TopVideos from '../../components/TopVideos';
-import FlowerHeader from '../../components/Elements/FlowerHeader'
+import FlowerHeader from '../../components/Elements/flowerHeader'
 import styleSong from './Songs.module.css'
 
 function Songs() {

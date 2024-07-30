@@ -1,7 +1,7 @@
 import React from 'react'
 import ChannelSocialMedias from '../../components/SocialMedias';
 import styleAbout from './About.module.css'
-import FlowerHeader from '../../components/Elements/FlowerHeader';
+import FlowerHeader from '../../components/Elements/flowerHeader';
 
 function About() {
   return (

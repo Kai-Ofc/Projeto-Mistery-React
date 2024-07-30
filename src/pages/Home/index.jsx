@@ -1,7 +1,7 @@
 import React from 'react';
 import TopVideos from '../../components/TopVideos';
 import ChannelSocialMedias from '../../components/SocialMedias';
-import FlowerHeader from '../../components/Elements/FlowerHeader';
+import FlowerHeader from '../../components/Elements/flowerHeader';
 import TeamHeader from '../../components/Elements/TeamHeader';
 import styleHome from './Home.module.css';
 

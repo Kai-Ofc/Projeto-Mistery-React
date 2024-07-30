@@ -1,6 +1,6 @@
 import React from 'react';
 import styleSocialMedia from './SocialMedias.module.css'
-import FlowerHeader from '../Elements/FlowerHeader/index';
+import FlowerHeader from '../Elements/flowerHeader/index';
 
 
 const ChannelSocialMedias = () => {

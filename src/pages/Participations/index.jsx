@@ -5,12 +5,12 @@ import apiKey from '../../services/apiKey';
 import channelId from '../../services/channelId';
 import VideoPagination from '../../components/VideoPagination'
 import TopVideos from '../../components/TopVideos';
-import FlowerHeader from '../../components/Elements/FlowerHeader'
-import styleSong from './Songs.module.css'
+import FlowerHeader from '../../components/Elements/flowerHeader'
+import styleParticipation from './Participation.module.css'
 
-function Participações() {
+function Participations() {
   return (
-    <div className={styleSong.container}>
+    <div className={styleParticipation.container}>
       <FlowerHeader titulo="PRINCIPAIS PARTICIPAÇÕES"/>
       <TopVideos />
       <FlowerHeader titulo="TODAS AS PARTICIPAÇÕES"/>
@@ -19,4 +19,4 @@ function Participações() {
   );
 }
 
-export default Participações;
+export default Participations;
