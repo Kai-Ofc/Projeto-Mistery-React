@@ -1,8 +1,9 @@
 import React from 'react'
+import styleFooter from './Footer.module.css'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className={styleFooter.footer}>Feito com 💕 por Karen & Arthur</div>
   )
 }
 
