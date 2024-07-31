@@ -12,57 +12,51 @@ import Carrosel from './../Elements/Carrossel/indexCarrossel'
 function TopParticipacoes() {
   const [videos, setVideos] = useState([]);
 
+  const playlistId = 'PLNamTFH3xVWCDCcfBRgGhCXA5rInDgjcK'
+
   useEffect(() => {
     const fetchTopVideos = async () => {
       try {
-        const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
+        const response = await axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
           params: {
             key: apiKey,
-            playlistId: 'PLNamTFH3xVWCDCcfBRgGhCXA5rInDgjcK',
-            part: 'snippet',
-            order: 'viewCount',
-            maxResults: 3,
-            type: 'video'
-          }
+            playlistId: playlistId,
+            part: 'contentDetails',
+            maxResults: 50, // Adjust as needed, max 50 per request
+          },
         });
 
-        if (response.status !== 200) {
-          throw new Error('Falha ao carregar os vídeos');
-        }
+        const videoIds = response.data.items.map(item => item.contentDetails.videoId).join(',');
 
-        // Obtemos os IDs dos vídeos para buscar as estatísticas e detalhes
-        const videoIds = response.data.items.map(item => item.id.videoId).join(',');
-
-        // Fazemos outra requisição para buscar as estatísticas e detalhes dos vídeos
-        const videosDetailsResponse = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
+        // Step 2: Get video details including view count
+        const videoDetailsResponse = await axios.get('https://www.googleapis.com/youtube/v3/videos', {
           params: {
             key: apiKey,
             id: videoIds,
-            part: 'snippet,statistics'
-          }
+            part: 'snippet,statistics',
+          },
         });
 
-        if (videosDetailsResponse.status !== 200) {
-          throw new Error('Falha ao carregar os detalhes dos vídeos');
-        }
+        const videos = videoDetailsResponse.data.items;
 
-        // Combinamos os dados dos vídeos com os detalhes
-        const videosWithDetails = response.data.items.map((item, index) => {
-          const video = {
-            id: item.id.videoId,
-            title: item.snippet.title,
-            thumbnail: item.snippet.thumbnails.high.url,
-            views: videosDetailsResponse.data.items[index].statistics.viewCount,
-            releaseDate: new Date(item.snippet.publishedAt).toLocaleDateString('pt-BR', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })
-          };
-          return video;
-        });
+        // Step 3: Sort videos by view count and get top 3
+        const topVideos = videos.sort((a, b) => b.statistics.viewCount - a.statistics.viewCount).slice(0, 3);
 
-        setVideos(videosWithDetails);
+        // Step 4: Format the video data
+        const formattedVideos = topVideos.map(video => ({
+          id: video.id,
+          releaseDate: new Date(video.snippet.publishedAt).toLocaleDateString('pt-BR', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric',
+          }),
+          thumbnail: video.snippet.thumbnails.high.url,
+          title: video.snippet.title,
+          views: video.statistics.viewCount,
+        }));
+
+        setVideos(formattedVideos);
+        console.log(videos)
       } catch (error) {
         console.error('Erro ao buscar vídeos:', error);
       }

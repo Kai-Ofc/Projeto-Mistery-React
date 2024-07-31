@@ -39,11 +39,11 @@ function TopVideos({videosParam}) {
       }
     ]
   };
-
+console.log(videosParam[0])
   return (
     <div className={styleCarrossel.container}>
       <Slider {...settings} className={styleCarrossel.slider}>
-        {videos.map((video) => (
+        {videosParam.map((video) => (
           <div key={video.id} className={styleCarrossel.slideItem}>
             <div className={styleCarrossel.slideInner}>
               <a
