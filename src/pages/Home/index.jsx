@@ -1,5 +1,6 @@
 import React from 'react';
 import TopVideos from '../../components/TopVideos';
+import TopParticipacoes from '../../components/TopParticipacoes';
 import ChannelSocialMedias from '../../components/SocialMedias';
 import FlowerHeader from '../../components/Elements/flowerHeader';
 import TeamHeader from '../../components/Elements/TeamHeader';
@@ -22,7 +23,6 @@ import equipeAgencia from '../../assets/Images/Equipe/Equipe-Agencia.jpg';
 import equipeIrlan from '../../assets/Images/Equipe/Equipe-IrlanDerick.jpg';
 
 
-
 function Home() {
   return (
     <div className={styleHome.container}>
@@ -30,7 +30,7 @@ function Home() {
       <FlowerHeader titulo="PRINCIPAIS MÚSICAS"/>
       <TopVideos />
       <FlowerHeader titulo="PRINCIPAIS PARTICIPAÇÕES"/>
-      <TopVideos />
+      <TopParticipacoes />
       <FlowerHeader titulo="EQUIPE"/>
       <div className={styleHome.tContainer}>
         <TeamHeader titulo="EDITORES FIXOS"/>

@@ -9,7 +9,7 @@ import FlowerHeader from '../Elements/flowerHeader/index';
 import styleTopVideos from './TopVideos.module.css'
 import Carrosel from './../Elements/Carrossel/indexCarrossel'
 
-function TopVideos() {
+function TopParticipacoes() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ function TopVideos() {
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
           params: {
             key: apiKey,
-            channelId: channelId,
+            playlistId: 'PLNamTFH3xVWCDCcfBRgGhCXA5rInDgjcK',
             part: 'snippet',
             order: 'viewCount',
             maxResults: 3,
@@ -78,4 +78,4 @@ return (
 );
 }
 
-export default TopVideos
+export default TopParticipacoes

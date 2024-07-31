@@ -5,39 +5,15 @@ import channelId from '../../services/channelId';
 import styles from './VideoPagination.module.css'; // Importando o módulo CSS
 import FlowerHeader from '../Elements/flowerHeader/index';
 
-function Songs() {
-  const [videos, setVideos] = useState([]);
+function Songs({videosParam}) {
+  const videos = videosParam;
   const [currentPage, setCurrentPage] = useState(1);
   const videosPerPage = 8; // 2 colunas de 4 linhas
-
-  useEffect(() => {
-    const fetchVideos = async () => {
-      try {
-        const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-          params: {
-            part: 'snippet',
-            channelId: channelId,
-            key: apiKey,
-            maxResults: 100,
-            type: 'video',
-          },
-        });
-        const sortedVideos = response.data.items.sort((a, b) => {
-          // Ordena por data, do mais recente para o mais antigo
-          return new Date(b.snippet.publishedAt) - new Date(a.snippet.publishedAt);
-        });
-        setVideos(sortedVideos);
-      } catch (error) {
-        console.log("Erro ao carregar vídeos: " + error);
-      }
-    };
-    fetchVideos();
-  }, []);
 
   // Calcula o índice inicial e final dos vídeos da página atual
   const indexOfLastVideo = currentPage * videosPerPage;
   const indexOfFirstVideo = indexOfLastVideo - videosPerPage;
-  const currentVideos = videos.slice(indexOfFirstVideo, indexOfLastVideo);
+  const currentVideos = videosParam.slice(indexOfFirstVideo, indexOfLastVideo);
 
   // Muda a página
   const paginate = (pageNumber) => setCurrentPage(pageNumber);

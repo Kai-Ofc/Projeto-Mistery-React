@@ -5,6 +5,7 @@ import BasePage from './pages/BasePage'
 import Songs from './pages/Songs'
 import Page404 from './pages/Page404'
 import Music from './pages/Music'
+import Participations from './pages/Participations'
 
 function AppRoutes() {
     return (
@@ -15,6 +16,7 @@ function AppRoutes() {
                     <Route path="/about" element={ <About /> }></Route>
                     <Route path="/songs" element={ <Songs /> }></Route>
                     <Route path='/music' element={ <Music /> }></Route>
+                    <Route path='/feat' element={ <Participations /> }></Route>
                     <Route path="*" element={ <Page404 /> }></Route>    
                 </Route>
             </Routes>
