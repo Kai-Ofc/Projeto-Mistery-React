@@ -14,3 +14,15 @@
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
+
+@media(max-width: 480px) {
+    .container{
+        padding: 0px 8px 0px 8px;
+    }
+
+    .inspirationSpan{
+        font-size: 18px;
+        line-height: 2em;
+        text-align: center;
+    }
+}
