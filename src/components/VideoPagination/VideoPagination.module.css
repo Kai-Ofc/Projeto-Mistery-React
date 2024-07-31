@@ -53,4 +53,18 @@
     opacity: 1;
     color: #fff;
   }
+
+/* Telas Pequenas */
+@media(max-width: 480px) {
+  .container {
+    padding: 0px;
+  }
+
+  .gridContainer {
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-bottom: 30px;
+  }
+
+}
   
