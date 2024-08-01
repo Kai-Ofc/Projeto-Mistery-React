@@ -47,3 +47,19 @@
 .saibaMais{
   color: #F2295F;
 }
+
+@media(max-width: 480px) {
+  .responsiveDescription {
+    display: none;
+  }
+
+  .saibaMais{
+   display: none;
+  }
+
+  .container {
+    padding: 10px;
+  }
+    
+
+}

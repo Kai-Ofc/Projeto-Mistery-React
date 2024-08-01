@@ -6,7 +6,7 @@ const FlowerHeader = (props) => {
     
     return (
         <div className={styleflowerHeader.tittle}> 
-          <RoseSvg width="1.8em" height="1.8em" />
+          <RoseSvg width="35px" height="35px" />
           <span>{props.titulo}</span>
           <div className={styleflowerHeader.line}/>
         </div>

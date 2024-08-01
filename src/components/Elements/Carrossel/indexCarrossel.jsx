@@ -54,12 +54,11 @@ console.log(videosParam[0])
                   className={styleCarrossel.thumbnail}
                 />
                 <div className={styleCarrossel.description}>
-                  <p>{video.title.toUpperCase()} <span>{video.releaseDate.toUpperCase()}</span></p>
-                  <p>
-                    {new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(video.views)} DE VISUALIZAÇÕES{' '}
-                    <a 
-                      className={styleCarrossel.saibaMais}>
-                        SAIBA MAIS
+                  <p>{video.title.toUpperCase()} <span className={styleCarrossel.responsiveDescription}>{video.releaseDate.toUpperCase()}</span></p>
+                  <p >
+                    <span className={styleCarrossel.responsiveDescription}>{new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(video.views)} DE VISUALIZAÇÕES{' '}</span>
+                    <a className={styleCarrossel.saibaMais}>
+                      SAIBA MAIS
                     </a>
                   </p>
                 </div>
