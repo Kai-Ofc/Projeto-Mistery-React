@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
     <div className={styleLogin.container}>
-      <FlowerHeader titulo="CADASTRAR"/>
+      <FlowerHeader titulo="LOGAR"/>
       <form onSubmit={handleLogin} className={styleLogin.formRegister}>
         <div className={styleLogin.inputWrapper}>
           <FlowerHeaderForm titulo="EMAIL"/>
