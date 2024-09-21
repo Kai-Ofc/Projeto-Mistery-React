@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import styleLogin from './Login.module.css';
+import FlowerHeader from '../../components/Elements/flowerHeader';
+import FlowerHeaderForm from '../../components/Elements/flowerHeaderForm';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -33,11 +36,11 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Email:</label>
+    <div className={styleLogin.container}>
+      <FlowerHeader titulo="CADASTRAR"/>
+      <form onSubmit={handleLogin} className={styleLogin.formRegister}>
+        <div className={styleLogin.inputWrapper}>
+          <FlowerHeaderForm titulo="EMAIL"/>
           <input
             type="email"
             value={email}
@@ -45,8 +48,8 @@ const Login = () => {
             required
           />
         </div>
-        <div>
-          <label>Senha:</label>
+        <div className={styleLogin.inputWrapper}>
+          <FlowerHeaderForm titulo="SENHA"/>
           <input
             type="password"
             value={password}
@@ -54,7 +57,7 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit">Entrar</button>
+        <button type="submit" className={styleLogin.buttonRegister}>Entrar</button>
       </form>
     </div>
   );

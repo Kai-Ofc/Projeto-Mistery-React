@@ -1,0 +1,37 @@
+.tittle{
+  display: flex;
+  align-items: end;
+  margin-bottom: 2vh;
+}
+
+.tittle svg{
+  margin-bottom: -2px;
+}
+
+.tittle span{
+  margin-left: .6%;
+  margin-bottom: -9px;
+  white-space: nowrap; 
+  font-size: 20px;
+}
+
+.line{
+  background-color: white;
+  width: 5%;
+  height: 1px;
+  margin-left: .6%;
+  border-radius: 30px;
+}
+
+
+/* Telas Pequenas */
+@media(max-width: 480px) {
+  .tittle svg{
+    display: none;
+  }
+
+  .tittle span{
+    margin-left: 0%;
+    font-size: 18px;
+  }
+}
