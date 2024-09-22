@@ -39,7 +39,7 @@
     border: none;
     background-image: linear-gradient(to right, rgba(89, 2, 43, 1),rgba(140, 3, 78, 1),rgba(217, 30, 80, 1));
     border-radius: 30px;
-    margin-bottom: 5.8vh;
+    margin-bottom: 21vh;
 }
 
 /* Telas Pequenas */
@@ -50,6 +50,6 @@
     }
 
     .buttonRegister {
-        margin-bottom: 6vh;
+        margin-bottom: 24vh;
     }
 }
