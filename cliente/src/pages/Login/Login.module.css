@@ -42,6 +42,12 @@
     margin-bottom: 21vh;
 }
 
+@media (min-width: 1025px) {
+    .buttonRegister {
+        margin-bottom: 23.2vh;
+    }
+}
+
 /* Telas Pequenas */
 @media(max-width: 480px) {
 
